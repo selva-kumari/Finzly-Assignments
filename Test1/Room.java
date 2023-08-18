@@ -27,6 +27,11 @@ private String check_out;
 			System.out.println("go other rooms");
 		}
 	}
+	@Override
+	public String toString() {
+		return "Room [roomNumber=" + roomNumber + ", capacity=" + capacity + ", pricePerNight=" + pricePerNight
+				+ ", check_in=" + check_in + ", check_out=" + check_out + "]";
+	}
 	public void reservation(int persons,String check_in,String check_out) {
 		if(checkAvailable(persons)==true) {
 			System.out.println("Your room is reserved");
@@ -39,7 +44,7 @@ private String check_out;
 
 	public static void main(String[] args) {
 	Room r=new Room(1,4,2000);
-    r.reservation(7);
+    r.reservation(2);
     r.reservation(2,"17-8-2023","18-8-23");
  
 	}
